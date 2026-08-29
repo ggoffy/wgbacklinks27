@@ -28,6 +28,7 @@ $op       = Request::getString('op', 'list');
 $clientId = Request::getInt('client_id');
 $error    = Request::getString('error', 'none');
 
+$templateMain = 'wgbacklinks_admin_clients.tpl';
 
 \xoops_loadLanguage('main', 'wgbacklinks');
 
@@ -44,7 +45,7 @@ switch ($op) {
         $GLOBALS['xoTheme']->addStylesheet($style, null);
         $start = Request::getInt('start');
         $limit = Request::getInt('limit', $helper->getConfig('adminpager'));
-        $templateMain = 'wgbacklinks_admin_clients.tpl';
+
         $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_CLIENT, 'clients.php?op=new');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
@@ -82,7 +83,6 @@ switch ($op) {
 
     break;
     case 'new':
-        $templateMain = 'wgbacklinks_admin_clients.tpl';
         $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_CLIENTS_LIST, 'clients.php', 'list');
         $GLOBALS['xoopsTpl']->assign('buttons', $adminMenu->renderButton());
@@ -136,7 +136,6 @@ switch ($op) {
 
     break;
     case 'edit':
-        $templateMain = 'wgbacklinks_admin_clients.tpl';
         $GLOBALS['xoopsTpl']->assign('navigation', $adminMenu->addNavigation('clients.php'));
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_ADD_CLIENT, 'clients.php?op=new');
         $adminMenu->addItemButton(\_AM_WGBACKLINKS_CLIENTS_LIST, 'clients.php', 'list');

@@ -52,7 +52,7 @@ $GLOBALS['xoopsTpl']->assign('modPathIcon32', $modPathIcon32);
 if (\file_exists($GLOBALS['xoops']->path($pathModuleAdmin . '/moduleadmin.php'))) {
     include_once $GLOBALS['xoops']->path($pathModuleAdmin . '/moduleadmin.php');
 } else {
-    \redirect_header('../../../admin.php.php', 5, _AM_MODULEADMIN_MISSING);
+    \redirect_header('../../../admin.php', 5, _AM_MODULEADMIN_MISSING);
 }
 xoops_cp_header();
 $adminMenu = new ModuleAdmin();
