@@ -70,10 +70,10 @@ class Sites extends \XoopsObject
     /**
      * Get form
      *
-     * @param false $action
+     * @param bool $action
      * @return \XoopsThemeForm
      */
-    public function getFormSites(false $action = false): \XoopsThemeForm
+    public function getFormSites(bool $action = false): \XoopsThemeForm
     {
         global $xoopsUser;
         

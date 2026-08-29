@@ -66,10 +66,10 @@ class Providers extends \XoopsObject
     /**
      * Get form
      *
-     * @param false $action
+     * @param bool $action
      * @return \XoopsThemeForm
      */
-    public function getFormProviders(false $action = false): \XoopsThemeForm
+    public function getFormProviders(bool $action = false): \XoopsThemeForm
     {
         if ($action === false) {
             $action = $_SERVER['REQUEST_URI'];

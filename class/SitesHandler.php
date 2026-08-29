@@ -41,7 +41,7 @@ class SitesHandler extends \XoopsPersistableObjectHandler
     }
 
     /**
-     * @param $isNew
+     * @param bool $isNew
      *
      * @return object
      */

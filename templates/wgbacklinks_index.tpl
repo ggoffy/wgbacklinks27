@@ -3,9 +3,9 @@
 <{if !empty($sites)}>
 	<table class="table">
         <tr>
-			<th class="head center"><{$smarty.const._MA_WGBACKLINKS_SITE_NAME}></th>
-            <th class="head center"><{$smarty.const._MA_WGBACKLINKS_SITE_DESCR}></th>
-            <th class="head center"><{$smarty.const._MA_WGBACKLINKS_SITE_URL}></th>
+			<th class="head center"><{$smarty.const._MD_WGBACKLINKS_SITE_NAME}></th>
+            <th class="head center"><{$smarty.const._MD_WGBACKLINKS_SITE_DESCR}></th>
+            <th class="head center"><{$smarty.const._MD_WGBACKLINKS_SITE_URL}></th>
 		</tr>
 		<{if count($sites) > 0}>
 			<{section name=i loop=$sites}>

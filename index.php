@@ -53,7 +53,7 @@ $GLOBALS['xoopsTpl']->assign('copyright', $copyright);
 wgbacklinksMetaKeywords($helper->getConfig('keywords') . ', ' . \implode(',', $keywords));
 unset($keywords);
 // Description
-wgbacklinksMetaDescription(\_MA_WGBACKLINKS_INDEX_DESC);
+wgbacklinksMetaDescription(\_MD_WGBACKLINKS_INDEX_DESC);
 $GLOBALS['xoopsTpl']->assign('xoops_mpageurl', \WGBACKLINKS_URL . '/index.php');
 
 include __DIR__ . '/footer.php';

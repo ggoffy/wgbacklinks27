@@ -166,8 +166,8 @@ switch ($op) {
                 if ($result == 'success-delete-provider' || $result == 'delete-provider:provider-not-exists') {
                     // creating provider successful or provider already existing
                     \redirect_header('clients.php', 3, \_AM_WGBACKLINKS_FORM_DELETE_OK);
-                } else if ( $result == \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY ) {
-                    \redirect_header('clients.php?op=list&amp;error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE . "<br>" . \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY, 10, \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE);
+                } else if ( $result == \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY ) {
+                    \redirect_header('clients.php?op=list&amp;error=' . \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE . "<br>" . \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY, 10, \_AM_WGBACKLINKS_PROVIDER_ERROR_DELETE);
                 } else {
                     // an error occured
                     $GLOBALS['xoopsTpl']->assign('error', $result);

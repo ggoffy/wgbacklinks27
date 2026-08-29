@@ -65,10 +65,10 @@ class Clients extends \XoopsObject
     /**
      * Get form
      *
-     * @param false $action
+     * @param bool $action
      * @return \XoopsThemeForm
      */
-    public function getFormClients(false $action = false): \XoopsThemeForm
+    public function getFormClients(bool $action = false): \XoopsThemeForm
     {
         global $xoopsUser;
         

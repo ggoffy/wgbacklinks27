@@ -57,7 +57,7 @@ if ($permModuleRead == 0) {
     $sql = "INSERT INTO `" . $xoopsDB->prefix('group_permission') . "` (`gperm_id`, `gperm_groupid`, `gperm_itemid`, `gperm_modid`, `gperm_name`) VALUES 
     (NULL, '2', '" . $mid . "', '1', 'module_read'), 
     (NULL, '3', '" . $mid . "', '1', 'module_read');";
-    $result = $xoopsDB->queryF($sql);
+    $result = $xoopsDB->exec($sql);
 }
 
 include __DIR__ . '/footer.php';

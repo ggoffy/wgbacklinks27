@@ -26,34 +26,9 @@ namespace XoopsModules\Wgbacklinks;
  */
 class Helper extends \Xmf\Module\Helper
 {
-    /**
-     * @var string
-     */
-    protected $dirname = null;
-    /**
-     * @var string
-     */
-    protected $module = null;
-    /**
-     * @var string
-     */
-    protected ?string $handler = null;
-    /**
-     * @var string
-     */
-    protected ?string $config = null;
-    /**
-     * @var string
-     */
-    public $debug = null;
-    /**
-     * @var array
-     */
-    protected array $debugArray = array();
-    /**
-    *  @protected function constructor class
-    *  @param mixed $debug
-    */
+
+    public $debug;
+
     public function __construct($debug)
     {
         $this->debug   = $debug;
@@ -63,10 +38,10 @@ class Helper extends \Xmf\Module\Helper
 
     /**
      * @static function getInstance
-     * @param false $debug
+     * @param bool $debug
      * @return Helper
      */
-    public static function getInstance(false $debug = false): Helper
+    public static function getInstance(bool $debug = false): Helper
     {
         static $instance;
         if (null === $instance) {
@@ -79,7 +54,7 @@ class Helper extends \Xmf\Module\Helper
     /**
      * @static function getModule
      *
-     * @return XoopsModule
+     * @return \XoopsModule|null
      */
     public function &getModule(): ?\XoopsModule
     {
@@ -97,7 +72,7 @@ class Helper extends \Xmf\Module\Helper
      * @return \XoopsObjectHandler|\XoopsPersistableObjectHandler
      * @throws \Exception
      */
-    public function getHandler($name)
+    public function getHandler($name): \XoopsObjectHandler|\XoopsPersistableObjectHandler
     {
         $class = __NAMESPACE__ . '\\' . \ucfirst($name) . 'Handler';
         if (!\class_exists($class)) {
@@ -246,8 +221,6 @@ class Helper extends \Xmf\Module\Helper
             if ($result === FALSE)  {
                 $error = "unexpected curl_error:".\curl_error($ch)."<br>";
             }
-
-            \curl_close($ch);
         } else {
             $opts = array('http' =>
                 array(

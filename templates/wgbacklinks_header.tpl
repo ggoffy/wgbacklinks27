@@ -1,4 +1,4 @@
 
 <h2 class="center">
-<{$smarty.const._MA_WGBACKLINKS_TITLE}>
+<{$smarty.const._MD_WGBACKLINKS_TITLE}>
 </h2>

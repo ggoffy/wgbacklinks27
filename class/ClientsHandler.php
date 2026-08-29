@@ -41,7 +41,7 @@ class ClientsHandler extends \XoopsPersistableObjectHandler
     }
 
     /**
-     * @param $isNew
+     * @param bool $isNew
      *
      * @return object
      */

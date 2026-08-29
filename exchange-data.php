@@ -74,7 +74,7 @@ if ($ptype == 'add-provider') {
             if ($providersHandler->insert($providersObj)) {
                 echo 'success-' . $ptype;
             } else {
-                $result_text = \str_replace('%p', $provider_name, \_MA_WGBACKLINKS_EXCHANGE_ERR_ADD_PROVIDER);
+                $result_text = \str_replace('%p', $provider_name, \_MD_WGBACKLINKS_EXCHANGE_ERR_ADD_PROVIDER);
                 $result_text = \str_replace('%c', $client_url, $result_text);
                 $result_text = \str_replace('%e', $providersObj->getHtmlErrors(), $result_text);
             }
@@ -82,7 +82,7 @@ if ($ptype == 'add-provider') {
             echo $ptype . ':provider-exists';
         }
     } else {
-        echo \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
+        echo \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
     }
 }
 
@@ -112,7 +112,7 @@ if ($ptype == 'delete-provider') {
                 if ($providersHandler->delete($providersObj)) {
                     echo 'success-' . $ptype;
                 } else {
-                    $result_text = \str_replace('%p', $provider_name, \_MA_WGBACKLINKS_EXCHANGE_ERR_DEL_PROVIDER);
+                    $result_text = \str_replace('%p', $provider_name, \_MD_WGBACKLINKS_EXCHANGE_ERR_DEL_PROVIDER);
                     $result_text = \str_replace('%c', $client_url, $result_text);
                     $result_text = \str_replace('%e', $providersObj->getHtmlErrors(), $result_text);
                     echo $result_text;
@@ -124,7 +124,7 @@ if ($ptype == 'delete-provider') {
             echo $ptype . ':provider-not-exists';
         }
     } else {
-        echo \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
+        echo \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
     }
 }
 
@@ -174,14 +174,14 @@ if ($ptype == 'add-client') {
                     if ($sitesHandler->insert($sitesObj)) {
                         echo 'success-' . $ptype;
                     } else {
-                        $result_text = \str_replace('%p', $provider_url, \_MA_WGBACKLINKS_EXCHANGE_ERR_PROV_ADD_SITE);
+                        $result_text = \str_replace('%p', $provider_url, \_MD_WGBACKLINKS_EXCHANGE_ERR_PROV_ADD_SITE);
                         $result_text = \str_replace('%c', $client_url, $result_text);
                         $result_text = \str_replace('%e', $clientsObj->getHtmlErrors(), $result_text);
                         echo $result_text;
                     }
                 }
             } else {
-                $result_text = \str_replace('%p', $provider_url, \_MA_WGBACKLINKS_EXCHANGE_ERR_ADD_CLIENT);
+                $result_text = \str_replace('%p', $provider_url, \_MD_WGBACKLINKS_EXCHANGE_ERR_ADD_CLIENT);
                 $result_text = \str_replace('%c', $client_url, $result_text);
                 $result_text = \str_replace('%e', $clientsObj->getHtmlErrors(), $result_text);
                 echo $result_text;
@@ -190,7 +190,7 @@ if ($ptype == 'add-client') {
             echo $ptype . ':client-exists';
         }
     } else {
-        echo \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_PKEY;
+        echo \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_PKEY;
     }
 }
 
@@ -221,7 +221,7 @@ if ($ptype == 'delete-client') {
                 if ($clientsHandler->delete($clientsObj)) {
                     echo 'success-' . $ptype;
                 } else {
-                    $result_text = \str_replace('%p', $provider_name, \_MA_WGBACKLINKS_EXCHANGE_ERR_DEL_CLIENT);
+                    $result_text = \str_replace('%p', $provider_name, \_MD_WGBACKLINKS_EXCHANGE_ERR_DEL_CLIENT);
                     $result_text = \str_replace('%c', $client_url, $result_text);
                     $result_text = \str_replace('%e', $clientsObj->getHtmlErrors(), $result_text);
                     echo $result_text;
@@ -233,7 +233,7 @@ if ($ptype == 'delete-client') {
             echo $ptype . ':client-not-exists';
         }
     } else {
-        echo \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_PKEY;
+        echo \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_PKEY;
     }
 }
 
@@ -286,7 +286,7 @@ if ($ptype == 'share-site') {
                 if ($sitesHandler->delete($sitesObj)) {
                     $result = 'deleted ' . $client_key;
                 } else {
-                    $result = \str_replace('%s', $psite_name, \_MA_WGBACKLINKS_EXCHANGE_ERR_DELETE_SITE);
+                    $result = \str_replace('%s', $psite_name, \_MD_WGBACKLINKS_EXCHANGE_ERR_DELETE_SITE);
                     $result = \str_replace('%c', $client_url, $result);
                 }
             } else {
@@ -307,12 +307,12 @@ if ($ptype == 'share-site') {
             if ($sitesHandler->insert($sitesObj)) {
                 echo $result;
             } else {
-                $result_text = \str_replace('%s', $psite_name, \_MA_WGBACKLINKS_EXCHANGE_ERR_ADD_SITE);
+                $result_text = \str_replace('%s', $psite_name, \_MD_WGBACKLINKS_EXCHANGE_ERR_ADD_SITE);
                 echo \str_replace('%c', $client_url, $result_text);
             }
         }
     } else {
-        echo \_MA_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
+        echo \_MD_WGBACKLINKS_EXCHANGE_ERR_INVALID_CKEY;
     }
 
 }
