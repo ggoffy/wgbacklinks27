@@ -21,7 +21,7 @@ declare(strict_types=1);
  */
 
 // Copy base file
-$indexFile = XOOPS_UPLOAD_PATH . '/index.html';
+$indexFile = XOOPS_UPLOAD_PATH . '/index.php';
 $blankFile = XOOPS_UPLOAD_PATH . '/blank.gif';
 // Making of uploads/wgbacklinks folder
 $wgbacklinks = XOOPS_UPLOAD_PATH . '/wgbacklinks';
@@ -29,5 +29,5 @@ if (!\is_dir($wgbacklinks)) {
     \mkdir($wgbacklinks);
     chmod($wgbacklinks, 0777);
 }
-\copy($indexFile, $wgbacklinks . '/index.html');
+\copy($indexFile, $wgbacklinks . '/index.php');
 // ------------------- Install Footer ------------------- //
